@@ -1,5 +1,5 @@
-/*Os dados são inseridos da lista até a pilha de forma (FIFO), após isso
-são inseridos na fila tirando da pilha de forma " Last in, First Out" */
+/*Nesse código os dados são inseridos da lista até a pilha utilizando FIFO, após isso
+são inseridos na fila tirados da pilha de forma "Last in, First Out" */
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -9,9 +9,9 @@ import java.util.Stack;
 public class atividade03_uam {
 
 	public static void main(String[] args) {
-		ArrayList<Integer> l ista = new ArrayList<>(5);
-		Stack<In teger> pilha = new Stack<>();
-		Queue<Integer> fila = new LinkedList<>();
+		ArrayList<Integer> lista = new ArrayList<>(5);
+		Stack	 <Integer> pilha = new Stack<>();
+		Queue 	 <Integer> fila  = new LinkedList<>();
 
     lista.add(1);
     lista.add(2);
@@ -22,13 +22,13 @@ public class atividade03_uam {
     System.out.printf("Lista: %s\nPilha: %s\nFila: %s\n\n", lista, pilha, fila);
 
     while(!lista.isEmpty()) {
-      int elemen to = lista.remove(0);
+      int elemento = lista.remove(0);
       pilha.push(elemento);
       System.out.printf("Lista: %s\nPilha: %s\nFila: %s\n\ n", lista, pilha, fila);
     }
 
     while(!pilha.isEmpty()) {
-      int elemen to = p ilha.pop();
+      int elemento = pilha.pop();
       fila.add(elemento);
 
       System.out.printf("Lista: %s\nPilha: %s\nFila: %s\n\ n", lista, pilha, fila);
@@ -44,18 +44,18 @@ public class atividade03_uam {
     System.out.printf("Lista: %s\nPilha: %s\nFila: %s\n\n", lista, pilha, fila);
 
     while(!lista.isEmpty()) {
-      int elemen to = lista.remove(0);
+      int elemento = lista.remove(0);
       pilha.push(elemento);
 
       System.out.printf("Lista: %s\nPilha: %s\nFila: %s\n\ n", lista, pilha, fila);
     }
 
     while(!pilha.isEmpty()) {
-      int elemen to = p ilha.pop();
+      int elemento = pilha.pop();
       fila.add(elemento);
       System.out.printf("Lista: %s\nPilha: %s\nFila: %s\n\ n", lista, pilha, fila);
     }
 
-    System.out.println("Fila fin al: " + fila);
+    System.out.println("Resultado fila final: " + fila);
   }
 }
